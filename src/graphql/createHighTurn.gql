@@ -1,0 +1,12 @@
+mutation createLowTurn ($name: String, $date: String) {
+  insert_MediumTurn (objects: [{
+    name: $name,
+    date: $date,
+    status: false,
+    priority: 1
+  }]) {
+    returning {
+      id
+    }
+  }
+}
