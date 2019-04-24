@@ -5,9 +5,9 @@ import ApolloClient from 'apollo-boost'
 Vue.use(VueApollo)
 
 const apolloClient = new ApolloClient({
-  uri: '', // GraphQL database URI
+  uri: 'https://vue-queueapp-protorype.herokuapp.com/v1alpha1/graphql',
   headers: {
-    'x-hasura-admin-secret': '' // Hasura's GraphQL database Secret
+    'x-hasura-admin-secret': 'qA@opJD^3?fx4`g4Dy>!'
   }
 })
 
