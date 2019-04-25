@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <div v-if="error">Error, name field can't be empty</div>
-    <input type="text" class="text-input" v-bind="name" />
-    <button class="send-button">Send</button>
+    <input type="text" class="text-input" v-model="name" />
+    <button class="send-button" @click="addMediumTurn">Send</button>
   </div>
 </template>
 
@@ -16,7 +16,7 @@ export default {
     }
   },
   methods: {
-    addLowTurn: function () {
+    addMediumTurn: function () {
       if (this.name === '') {
         this.error = true;
       } else {

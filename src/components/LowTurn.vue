@@ -1,8 +1,8 @@
 <template>
   <div class="page">
     <div v-if="error">Error, name field can't be empty</div>
-    <input type="text" class="text-input" v-bind="name" />
-    <button class="send-button">Send</button>
+    <input type="text" class="text-input" v-model="name" />
+    <button class="send-button" @click="addLowTurn">Send</button>
   </div>
 </template>
 
@@ -19,7 +19,9 @@ export default {
     addLowTurn: function () {
       if (this.name === '') {
         this.error = true;
+        alert('This is an error')
       } else {
+        alert('This is happening')
         let date = new Date();
         date = date.getHours().toString() + date.getMinutes().toString() + date.getSeconds().toString();
         const { name } = this;
@@ -33,6 +35,7 @@ export default {
         })
       }
       this.name = ''
+      alert('This is ending')
     }
   }
 }
