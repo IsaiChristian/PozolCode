@@ -1,39 +1,55 @@
 {
-  "name": "todo",
-  "version": "0.0.1",
-  "description": "A Quasar Framework app",
-  "productName": "Quasar App",
-  "cordovaId": "org.cordova.quasar.app",
-  "author": "",
+  "name": "queue-prototype",
+  "version": "0.1.0",
   "private": true,
   "scripts": {
-    "lint": "eslint --ext .js,.vue src",
-    "test": "echo \"No test specified\" && exit 0"
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "vue-i18n": "^7.3.3"
+    "apollo-boost": "^0.3.1",
+    "core-js": "^2.6.5",
+    "eslint-plugin-graphql": "^3.0.3",
+    "graphql": "^14.2.1",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "vue": "^2.6.10",
+    "vue-apollo": "^3.0.0-beta.28"
   },
   "devDependencies": {
-    "@vue/eslint-config-standard": "^4.0.0",
+    "@vue/cli-plugin-babel": "^3.6.0",
+    "@vue/cli-plugin-eslint": "^3.6.0",
+    "@vue/cli-service": "^3.6.0",
     "babel-eslint": "^10.0.1",
-    "eslint": "^5.10.0",
-    "eslint-loader": "^2.1.1",
+    "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.0.0",
-    "quasar-cli": "^0.17.0",
-    "strip-ansi": "=3.0.1"
+    "graphql-tag": "^2.9.0",
+    "vue-cli-plugin-apollo": "^0.19.2",
+    "vue-template-compiler": "^2.5.21"
   },
-  "engines": {
-    "node": ">= 8.9.0",
-    "npm": ">= 5.6.0",
-    "yarn": ">= 1.6.0"
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/essential",
+      "eslint:recommended"
+    ],
+    "rules": {},
+    "parserOptions": {
+      "parser": "babel-eslint"
+    }
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
   },
   "browserslist": [
     "> 1%",
     "last 2 versions",
-    "not ie <= 10"
-  ],
-  "resolutions": {
-    "ajv": "6.8.1"
-  }
+    "not ie <= 8"
+  ]
 }

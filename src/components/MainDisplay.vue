@@ -1,16 +1,24 @@
 <template>
   <div class="page">
-    <ApolloQuiery :query="require('../graphql/getTurns.gql')">
+    <ApolloQuery :query="require('../graphql/getTurns.gql')">
       <template slot-scope="{ result: { data, error, loading } }">
         <div id="loading" v-if="loading">Loading...</div>
         <div id="error" v-else-if="error">Error!</div>
-        <ol id="data" v-else-if="data">
-          <li v-for="turn in data.Turns" :key="turn.id">
-            {{ turn.name }}
-          </li>
-        </ol>
+        <div id="data" v-else-if="data">
+          <ol>
+            <li v-for="turn in data.highTurn" :key="turn.id">
+              {{ turn.name }}
+            </li>
+            <li v-for="turn in data.mediumTurn" :key="turn.id">
+              {{ turn.name }}
+            </li>
+            <li v-for="turn in data.lowTurn" :key="turn.id">
+              {{ turn.name }}
+            </li>
+          </ol>
+        </div>
       </template>
-    </ApolloQuiery>
+    </ApolloQuery>
   </div>
 </template>
 

@@ -1,0 +1,20 @@
+query getTurns {
+  highTurn(order_by: {date: asc}, where: {status: {_eq: false}}) {
+    id
+    name
+    date
+    status
+  }
+  mediumTurn(order_by: {date: asc}, where: {status: {_eq: true}}) {
+    id
+    name
+    date
+    status
+  }
+  lowTurn(order_by: {date: asc}, where: {status: {_eq: true}}) {
+    id
+    name
+    date
+    status
+  }
+}

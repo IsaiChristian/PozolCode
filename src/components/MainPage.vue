@@ -2,12 +2,16 @@
   <div class="page">
     <p>Add Low Turn</p>
     <LowTurn />
+    <br>
     <p>Add Medium Turn</p>
     <MediumTurn />
+    <br>
     <p>Add High Turn</p>
     <HighTurn />
+    <br>
     <p>Main Display</p>
     <MainDisplay />
+    <br>
     <p>Operator's Display</p>
     <OperatorDisplay />
   </div>
@@ -27,7 +31,7 @@ export default {
     MediumTurn,
     HighTurn,
     MainDisplay,
-    OpertorDisplay
+    OperatorDisplay
   }
 }
 </script>

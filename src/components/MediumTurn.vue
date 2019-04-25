@@ -1,7 +1,7 @@
 <template>
   <div class="page">
     <div v-if="error">Error, name field can't be empty</div>
-    <input type="text" class="text-input" v-bind="date" />
+    <input type="text" class="text-input" v-bind="name" />
     <button class="send-button">Send</button>
   </div>
 </template>
@@ -18,10 +18,10 @@ export default {
   methods: {
     addLowTurn: function () {
       if (this.name === '') {
-        error = true;
+        this.error = true;
       } else {
         let date = new Date();
-        let date = date.getHours().toString() + date.getMinutes().toString() + date.getSeconds().toString();
+        date = date.getHours().toString() + date.getMinutes().toString() + date.getSeconds().toString();
         const { name } = this;
         this.$apollo.mutate({
           mutation: require('../graphql/createMediumTurn.gql'),
