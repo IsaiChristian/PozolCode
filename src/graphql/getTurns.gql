@@ -1,17 +1,17 @@
 query getTurns {
-  highTurn (where: {status: {_eq: false}}, order_by: {date: desc}) {
+  highTurn (where: {status: {_eq: "free"}}, order_by: {date: desc}) {
     id
     name
     date
     status
   }
-  mediumTurn (where: {status: {_eq: false}}, order_by: {date: desc}) {
+  mediumTurn (where: {status: {_eq: "free"}}, order_by: {date: desc}) {
     id
     name
     date
     status
   }
-  lowTurn (where: {status: {_eq: false}}, order_by: {date: desc}) {
+  lowTurn (where: {status: {_eq: "free"}}, order_by: {date: desc}) {
     id
     name
     date

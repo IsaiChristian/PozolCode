@@ -7,13 +7,13 @@
         <div id="data" v-else-if="data">
           <ol>
             <li v-for="turn in data.highTurn" :key="turn.id">
-              {{ turn.name }}
+              {{ turn.name }} | {{ turn.status }}
             </li>
             <li v-for="turn in data.mediumTurn" :key="turn.id">
-              {{ turn.name }}
+              {{ turn.name }} | {{ turn.status }}
             </li>
             <li v-for="turn in data.lowTurn" :key="turn.id">
-              {{ turn.name }}
+              {{ turn.name }} | {{ turn.status }}
             </li>
           </ol>
         </div>

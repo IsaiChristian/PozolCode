@@ -1,8 +1,7 @@
 mutation createLowTurn ($name: String, $date: String) {
   insert_mediumTurn (objects: [{
     name: $name,
-    date: $date,
-    status: false
+    date: $date
   }]) {
     returning {
       id
